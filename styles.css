@@ -2,10 +2,12 @@ body {
     background-color: rgb(241, 235, 221);
   }
 
-table, th, td {
-  border: 1px solid white;
-  border-collapse: collapse;
+
+  
+#hidden {
+  display: none;
 }
-th {
-  background-color: #96D4D4;
-}
+
+#hidden:target {
+  display: block;
+}	
