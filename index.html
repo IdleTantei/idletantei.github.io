@@ -10,7 +10,7 @@ title: index
 <body>
   <ul>
     {% for page in site.pages %}
-    {% if page.book == 'yes' %} 
+    {% if page.layout == 'book' %} 
       <li>
         <b>{{page.title}}</b>, {{page.authorJP}}, {{page.authorEn}}, {{page.year}}
         <details>
