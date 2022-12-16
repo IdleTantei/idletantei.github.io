@@ -24,5 +24,19 @@ title: index
 <h1>Seishi Yokomizo (横溝 正史) 1902-1981</h1>
 <p>Name: 横溝正史 (よこみぞせいし, YOKOMIZO Seishi)</p>
 <p>Detective: Kosuke Kindaichi (金田一 耕助, KINDAICHI Kōsuke)</p>
+<ul>
+  {% for page in site.pages %}
+  {% if page.layout == 'book' %} 
+  {% if page.authorEn == 'Seishi YOKOMIZO' %}
+    <li>
+      <b><a href="{{page.url}}">{{page.title}}</b></a>, {{page.authorJP}}, {{page.authorEn}}, {{page.year}}          
+      <details>
+        <summary>Summary</summary>
+        <span>{{page.summary}}</span>
+      </details>
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
 </body>
 </html>
