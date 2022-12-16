@@ -9,7 +9,8 @@ title: index
 </head>
 <body>
   <ul>
-    {% for page in site.data.books %} 
+    {% for hash in site.data.books %} 
+    {% assign page = hash[1]%}
       <li>
         <b>{{page.title}}</b>, {{page.authorJP}}, {{page.authorEn}}, {{page.year}}
         <details>
