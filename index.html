@@ -9,8 +9,8 @@ title: index
 </head>
 <body>
   <ul>
-    {% for hash in site.data.books %} 
-    {% assign page = hash[1]%}
+    {% for page in site.pages %}
+    {% if page.book == 'yes' %} 
       <li>
         <b>{{page.title}}</b>, {{page.authorJP}}, {{page.authorEn}}, {{page.year}}
         <details>
@@ -18,6 +18,7 @@ title: index
 					<span>{{page.summary}}</span>
 				</details>
       </li>
+      {% endif %}
       {% endfor %}
   </ul>
 </body>
