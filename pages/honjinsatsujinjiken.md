@@ -3,7 +3,7 @@ titleKj: 本陣殺人事件
 titleHg: ほんじんさつじんじけん
 titleRj: honjin satsujin jiken
 titleTr: The Honjin Murder Case
-authorJp: 横溝正史
+authorKj: 横溝正史
 authorHg: よこみぞせいし
 authorEn: Seishi YOKOMIZO
 year: 1946

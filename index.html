@@ -12,7 +12,7 @@ title: index
     {% for page in site.pages %}
     {% if page.layout == 'book' %} 
       <li>
-        <b><a href="{{page.url}}">{{page.titleJp}}</b></a>, {{page.authorJp}}, {{page.authorEn}}, {{page.year}}          
+        <b><a href="{{page.url}}">{{page.titleKj}}</b></a>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}          
         <details>
 					<summary>Summary</summary>
 					<span>{{page.summary}}</span>
@@ -29,10 +29,14 @@ title: index
   {% if page.layout == 'book' %} 
   {% if page.authorEn == 'Seishi YOKOMIZO' %}
     <li>
-      <b><a href="{{page.url}}">{{page.titleJp}}</b></a>, {{page.authorJp}}, {{page.authorEn}}, {{page.year}}          
+      <b><a href="{{page.url}}">{{page.titleKj}}</b></a>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}          
       <details>
         <summary>Summary</summary>
         <span>{{page.summary}}</span>
+      </details>
+      <details>
+        <summary>Review</summary>
+        <span>{{page.review}}</span>
       </details>
     </li>
     {% endif %}
