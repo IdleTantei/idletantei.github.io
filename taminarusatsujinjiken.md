@@ -5,5 +5,5 @@ authorJP: 西村京太郎
 year: 1980
 
 ---
-#　終着駅殺人事件
+#　終着駅殺人事件 novel
 test phrase

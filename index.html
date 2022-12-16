@@ -10,7 +10,9 @@ title: index
 <body>
   <ul>
     {% for page in site.pages %} 
-      <li>{{page.title}}</li>
+      <li>
+        <a href="{{page.url}}">{{page.title}}</a>
+      </li>
       {% endfor %}
   </ul>
 </body>
