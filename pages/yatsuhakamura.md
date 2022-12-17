@@ -5,7 +5,7 @@ titleRj: yatsuha kamura
 titleTr: The Village of Eight Graves
 authorJp: 横溝正史
 authorHg: よこみぞ せいし
-authorEn: Seishi YOKOMIZO
+authorEn: Seishi Yokomizo
 year: 1971
 Translation: The Village of Eight Graves
 Translator: Bryan Karetnyk

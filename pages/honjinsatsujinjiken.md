@@ -5,7 +5,7 @@ titleRj: honjin satsujin jiken
 titleTr: The Honjin Murder Case
 authorKj: 横溝正史
 authorHg: よこみぞせいし
-authorEn: Seishi YOKOMIZO
+authorEn: Seishi Yokomizo
 year: 1946
 Translation: The Honjin Murders
 Translator: Louise Heal Kawai
