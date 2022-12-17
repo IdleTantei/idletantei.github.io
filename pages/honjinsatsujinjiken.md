@@ -10,9 +10,11 @@ year: 1946
 Translation: The Honjin Murders
 Translator: Louise Heal Kawai
 yeartr: 2019
-summary: 
+series: Kosuke Kindaichi
+summary: The Ichiyanagi family has been living in a honjin, an inn for government officials, located in a post station since the Edo period. After a wedding ceremony, screams pierce through the night, accompanied by the sound of koto, in an unusual and extraordinary combination. The bribe and the groom who where resting in a separate building, are found covered in blood, brutally murdered. A golden folden screen, that has three bloody fingerprints on it, has fallen near the pillow, near a precious koto, the family treasure. The snow that had piled up all around the building makes it a complete locked-room. This book is the introduction of Kosuke Kindaichi who has just come back from the United States.
 review: Even though the ingenuosity of the tricks behind this locked-room mystery is the main attraction of the novel, it left me rather skeptical. The setting, the characters and most importantly, young detective Kosuke Kindaichi were what truly made the novel shine to me. Kindaichi is very reminiscent from young Kogoro Akechi as he appears in the first short stories.
 read: yes
 cover: 
+prize: 日本推理作家協会賞
 layout: book
 ---
