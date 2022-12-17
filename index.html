@@ -8,6 +8,11 @@ title: index
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <nav>
+    <a href="/">Authors of detective novels</a>
+    <a href="/blog/">Fictional detectives</a>
+    <a href="/blog/">Publications by year</a>
+  </nav>
   <ul>
     {% for page in site.pages %}
     {% if page.layout == 'book' %} 
@@ -21,6 +26,9 @@ title: index
       {% endif %}
       {% endfor %}
   </ul>
+
+<!-- Seishi Yokomizo -->
+<article class="author">
 <h1>Seishi Yokomizo (横溝 正史) 1902-1981</h1>
 <p>Name: 横溝正史 (よこみぞせいし, YOKOMIZO Seishi)</p>
 <p>Detective: Kosuke Kindaichi (金田一 耕助, KINDAICHI Kōsuke)</p>
@@ -43,5 +51,6 @@ title: index
     {% endif %}
     {% endfor %}
 </ul>
+</article>
 </body>
 </html>

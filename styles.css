@@ -1,11 +1,8 @@
-body {
-    background-color: rgb(241, 235, 221);
-  }
 
-table, th, td {
-  border: 1px solid white;
-  border-collapse: collapse;
-}
-th {
-  background-color: #96D4D4;
+
+/* articles for the main page */
+.authors {
+  margin: 0;
+  padding: 5px;
+  background-color: rgb(241, 237, 225);
 }
