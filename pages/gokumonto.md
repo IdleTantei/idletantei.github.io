@@ -12,7 +12,7 @@ translator: Louise Heal Kawai
 yeartr: 2022
 series: Kosuke Kindaichi
 seriesnb: 2
-summary: 
+summary: dddddddddd
 review: 
 read: no
 cover: 

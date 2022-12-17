@@ -40,34 +40,58 @@ title: index
   <button onclick="w3.show('#translations')">Show Translations</button>
   </p>
   
-  
+<div class="w3-row"> 
+  <div class="w3-container w3-threequarter">
+
 <!-- Seishi Yokomizo -->
-<article class="w3-container">
-<h1>Seishi Yokomizo (横溝 正史) 1902-1981</h1>
-<p>Name: 横溝正史 (よこみぞせいし, YOKOMIZO Seishi)</p>
-<p>Detective: Kosuke Kindaichi (金田一 耕助, KINDAICHI Kōsuke)</p>
-<ul>
-  {% for page in site.pages %}
-  {% if page.layout == 'book' %} 
-  {% if page.authorEn == 'Seishi Yokomizo' %}
-    <li>
-      <b><a href="{{page.url}}">{{page.titleKj}}</b></a>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}          
-      <div id="translations" class="w3-container">
-        {{page.translation}}, {{page.translator}}, {{page.yeartr}}
+<div class="w3-panel w3-margin w3-border w3-hover-border-black" id="yokomizo">
+  <h1>Seishi Yokomizo (横溝 正史) 1902-1981</h1>
+    <p>Name: 横溝正史 (よこみぞせいし, YOKOMIZO Seishi)</p>
+    <p>Detective: Kosuke Kindaichi (金田一 耕助, KINDAICHI Kōsuke)</p>
+      <ul>
+        {% for page in site.pages %}
+        {% if page.layout == 'book' %} 
+        {% if page.authorEn == 'Seishi Yokomizo' %}
+          <li>
+            <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
+              <b>{{page.titleKj}}</b>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}     
+            </button>     
+            <div id="translations" class="w3-container">
+              {{page.translation}}, {{page.translator}}, {{page.yeartr}}
+            </div>
+            <div id="{{page.titleKj}}" class="w3-container w3-hide">
+              {{page.summary}}, {{page.review}}
+            </div>
+           
+          </li>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </ul>
+  </div>
+  <script>
+    function Accordeon(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+</div>
+
+
+
+<!-- side bar -->
+  <div class="w3-container w3-quarter">
+    <h2>Authors</h2> 
+      <div class="w3-bar-block w3-black">
+        <a href="#yokomizo" class="w3-bar-item w3-button">Seishi Yokomizo</a>
+        <a href="#" class="w3-bar-item w3-button">Paris</a>
+        <a href="#" class="w3-bar-item w3-button">Tokyo</a>
       </div>
-      <details>
-        <summary>Summary</summary>
-        <span>{{page.summary}}</span>
-      </details>
-      <details>
-        <summary>Review</summary>
-        <span>{{page.review}}</span>
-      </details>
-    </li>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
-</ul>
-</article>
+  </div>
+</div>
 </body>
 </html>
