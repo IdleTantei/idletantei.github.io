@@ -7,8 +7,8 @@ authorKj: 横溝正史
 authorHg: よこみぞせいし
 authorEn: Seishi Yokomizo
 year: 1946
-Translation: The Honjin Murders
-Translator: Louise Heal Kawai
+translation: The Honjin Murders
+translator: Louise Heal Kawai
 yeartr: 2019
 series: Kosuke Kindaichi
 seriesnb: 1

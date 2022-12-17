@@ -7,8 +7,8 @@ authorJp: 横溝正史
 authorHg: よこみぞ せいし
 authorEn: Seishi Yokomizo
 year: 1971
-Translation: The Village of Eight Graves
-Translator: Bryan Karetnyk
+translation: The Village of Eight Graves
+translator: Bryan Karetnyk
 yeartr: 2021
 series: Kosuke Kindaichi
 seriesnb: 4

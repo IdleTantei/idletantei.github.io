@@ -7,8 +7,8 @@ authorJp: 横溝正史
 authorHg: よこみぞ せいし
 authorEn: Seishi Yokomizo
 year: 1947
-Translation: Gokumon Island
-Translator: Louise Heal Kawai
+translation: Gokumon Island
+translator: Louise Heal Kawai
 yeartr: 2022
 series: Kosuke Kindaichi
 seriesnb: 2

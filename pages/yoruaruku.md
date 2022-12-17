@@ -7,8 +7,8 @@ authorJp: 横溝正史
 authorHg: よこみぞ せいし
 authorEn: Seishi Yokomizo
 year: 1973
-Translation: 
-Translator: 
+translation: 
+translator: 
 yeartr: 
 series: Kosuke Kindaichi
 seriesnb: 3

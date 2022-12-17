@@ -7,6 +7,7 @@ title: index
   <title>Japanese detective novels</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 <body>
   <!-- en attente 
@@ -29,9 +30,19 @@ title: index
       {% endfor %}
   </ul>
 -->
-
+<div class="w3-container w3-center w3-teal">
+  <h1>This is a Heading</h1>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+</div>
+<p>
+  <button onclick="w3.hide('#translations')">Hide Translations</button>
+  <button onclick="w3.show('#translations')">Show Translations</button>
+  </p>
+  
+  
 <!-- Seishi Yokomizo -->
-<article class="w3-container w3-border-left w3-border-black">
+<article class="w3-container">
 <h1>Seishi Yokomizo (横溝 正史) 1902-1981</h1>
 <p>Name: 横溝正史 (よこみぞせいし, YOKOMIZO Seishi)</p>
 <p>Detective: Kosuke Kindaichi (金田一 耕助, KINDAICHI Kōsuke)</p>
@@ -41,6 +52,9 @@ title: index
   {% if page.authorEn == 'Seishi Yokomizo' %}
     <li>
       <b><a href="{{page.url}}">{{page.titleKj}}</b></a>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}          
+      <div id="translations" class="w3-container">
+        {{page.translation}}, {{page.translator}}, {{page.yeartr}}
+      </div>
       <details>
         <summary>Summary</summary>
         <span>{{page.summary}}</span>
@@ -54,7 +68,6 @@ title: index
     {% endif %}
     {% endfor %}
 </ul>
-<hr>
 </article>
 </body>
 </html>
