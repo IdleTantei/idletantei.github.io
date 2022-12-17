@@ -5,7 +5,7 @@ titleRj: gokumontō
 titleTr: Gokumon Island
 authorJp: 横溝正史
 authorHg: よこみぞ せいし
-authorEn: Seishi Yokomizo
+authorEn: Seishi YOKOMIZO
 year: 1947
 Translation: Gokumon Island
 Translator: Louise Heal Kawai
