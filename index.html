@@ -9,7 +9,31 @@ title: index
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
+
+<script>
+  function Accordeon(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
+
 <body>
+
+<!-- Navigation (Stays on Top) -->
+<div class="w3-top w3-bar w3-black">
+<a href="#home" class="w3-bar-item w3-button">Home</a>
+<a href="#about" class="w3-bar-item w3-button">About</a>
+<a href="#members" class="w3-bar-item w3-button">Members</a>
+<a href="#contact" class="w3-bar-item w3-button">Contact</a>
+</div>
+
+<!-- code pour generer les auteurs automatiquement -->
+{% assign authors = site.pages| group_by: "authorKj" %}
+
   <!-- en attente 
   <nav>
     <a href="/">Authors of detective novels</a>
@@ -43,11 +67,70 @@ title: index
 <div class="w3-row"> 
   <div class="w3-container w3-threequarter">
 
+{% for author in authors %}
+  <article class="w3-container w3-margin w3-border w3-hover-border-black" id="yokomizo">
+    <h1>Edogawa Rampo (江戸川乱歩) 1902-1981</h1>
+      <p>Name: 江戸川乱歩 (えどがわらんぽ)</p>
+      <p>Detective: Kogoro Akechi (明智小五郎)</p>
+      <p>Edogawa Rampo has created private detective Kogoro Akechi and the Boys Detective Club, a series for children led by young detective Kobayashi.</p>
+        <ul>
+          {% for page in site.pages %}
+          {% if page.layout == 'book' %} 
+          {% if page.authorEn == 'Edogawa Rampo' %}
+            <li>
+              <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
+                <b>{{page.titleKj}}</b>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}     
+              </button>     
+              <div id="translations" class="w3-container">
+                {{page.translation}}, {{page.translator}}, {{page.yeartr}}
+              </div>
+              <div id="{{page.titleKj}}" class="w3-container w3-hide">
+                {{page.summary}}, {{page.review}}
+              </div>
+            
+            </li>
+              {% endif %}
+              {% endif %}
+              {% endfor %}
+          </ul>
+  </article>
+{% endfor %}
+
 <!-- Seishi Yokomizo -->
-<div class="w3-panel w3-margin w3-border w3-hover-border-black" id="yokomizo">
+<article class="w3-container w3-margin w3-border w3-hover-border-black" id="yokomizo">
   <h1>Seishi Yokomizo (横溝 正史) 1902-1981</h1>
     <p>Name: 横溝正史 (よこみぞせいし, YOKOMIZO Seishi)</p>
     <p>Detective: Kosuke Kindaichi (金田一 耕助, KINDAICHI Kōsuke)</p>
+      <ul>
+        {% for page in site.pages %}
+        {% if page.layout == 'book' %} 
+        {% if page.authorJp == '横溝正史' %}
+          <li>
+            <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
+              <b>{{page.titleKj}}</b>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}     
+            </button>     
+              <div id="translations" class="w3-container">
+                {{page.translation}}, {{page.translator}}, {{page.yeartr}}
+              </div>
+              <div id="{{page.titleKj}}" class="w3-container w3-hide">
+                {{page.summary}}, {{page.review}}
+              </div>
+           
+          </li>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </ul>
+</article>
+
+
+
+<!-- Futaro Yamada -->
+<article class="w3-container w3-margin w3-border w3-hover-border-black" id="yokomizo">
+  <h1>Futaro Yamada (山田風太郎-やまだふうたろう) 1922-2001</h1>
+    <p>Name: 山田風太郎-やまだふうたろう YAMADA Futarou</p>
+    <p>Detective: Kosuke Kindaichi (金田一 耕助, KINDAICHI Kōsuke)</p>
+    <p>Futaro Yamada is one of the major Japanese writers of genre fiction. He wrote mainly mystery and historical novels. He is also know for his ninja novels.</p> 
       <ul>
         {% for page in site.pages %}
         {% if page.layout == 'book' %} 
@@ -68,17 +151,8 @@ title: index
             {% endif %}
             {% endfor %}
         </ul>
-  </div>
-  <script>
-    function Accordeon(id) {
-      var x = document.getElementById(id);
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else { 
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-    </script>
+</article>
+
 </div>
 
 
@@ -87,11 +161,12 @@ title: index
   <div class="w3-container w3-quarter">
     <h2>Authors</h2> 
       <div class="w3-bar-block w3-black">
-        <a href="#yokomizo" class="w3-bar-item w3-button">Seishi Yokomizo</a>
+        <a href="#yokomizo" class="w3-bar-item w3-button">Edogawa Rampo</a>
         <a href="#" class="w3-bar-item w3-button">Paris</a>
         <a href="#" class="w3-bar-item w3-button">Tokyo</a>
       </div>
   </div>
+</div>
 </div>
 </body>
 </html>
