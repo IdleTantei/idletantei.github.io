@@ -3,7 +3,7 @@ titleKj: 夜歩く
 titleHg: よるあるく
 titleRj: yoru aruku
 titleTr: Walking by Night
-authorJp: 横溝正史
+authorKj: 横溝正史
 authorHg: よこみぞ せいし
 authorEn: Seishi Yokomizo
 year: 1973

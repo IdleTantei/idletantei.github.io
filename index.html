@@ -32,7 +32,7 @@ title: index
 </div>
 
 <!-- code pour generer les auteurs automatiquement -->
-{% assign authors = site.pages| group_by: "authorKj" %}
+{% assign authors = site.pages | where:"layout", "book" | map:"authorKj"| uniq %}
 
   <!-- en attente 
   <nav>
@@ -44,7 +44,7 @@ title: index
     {% for page in site.pages %}
     {% if page.layout == 'book' %} 
       <li>
-        <b><a href="{{page.url}}">{{page.titleKj}}</b></a>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}          
+        <b><a href="{{page.url}}">{{page.titleKj}}</b></a>, {{page.authorJp}}, {{page.authorEn}}, {{page.year}}          
         <details>
 					<summary>Summary</summary>
 					<span>{{page.summary}}</span>
@@ -68,15 +68,15 @@ title: index
   <div class="w3-container w3-threequarter">
 
 {% for author in authors %}
-  <article class="w3-container w3-margin w3-border w3-hover-border-black" id="yokomizo">
-    <h1>Edogawa Rampo (江戸川乱歩) 1902-1981</h1>
-      <p>Name: 江戸川乱歩 (えどがわらんぽ)</p>
+  <article class="w3-container w3-margin w3-border w3-hover-border-black" id="{{author}}">
+    <h1>{{author}}</h1>
+ <!-- information rajoutee a la main   <p>Name: 江戸川乱歩 (えどがわらんぽ)</p>
       <p>Detective: Kogoro Akechi (明智小五郎)</p>
-      <p>Edogawa Rampo has created private detective Kogoro Akechi and the Boys Detective Club, a series for children led by young detective Kobayashi.</p>
+      <p>Edogawa Rampo has created private detective Kogoro Akechi and the Boys Detective Club, a series for children led by young detective Kobayashi.</p> -->  
         <ul>
           {% for page in site.pages %}
           {% if page.layout == 'book' %} 
-          {% if page.authorEn == 'Edogawa Rampo' %}
+          {% if page.authorKj == author %}
             <li>
               <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
                 <b>{{page.titleKj}}</b>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}     
@@ -96,62 +96,7 @@ title: index
   </article>
 {% endfor %}
 
-<!-- Seishi Yokomizo -->
-<article class="w3-container w3-margin w3-border w3-hover-border-black" id="yokomizo">
-  <h1>Seishi Yokomizo (横溝 正史) 1902-1981</h1>
-    <p>Name: 横溝正史 (よこみぞせいし, YOKOMIZO Seishi)</p>
-    <p>Detective: Kosuke Kindaichi (金田一 耕助, KINDAICHI Kōsuke)</p>
-      <ul>
-        {% for page in site.pages %}
-        {% if page.layout == 'book' %} 
-        {% if page.authorJp == '横溝正史' %}
-          <li>
-            <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
-              <b>{{page.titleKj}}</b>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}     
-            </button>     
-              <div id="translations" class="w3-container">
-                {{page.translation}}, {{page.translator}}, {{page.yeartr}}
-              </div>
-              <div id="{{page.titleKj}}" class="w3-container w3-hide">
-                {{page.summary}}, {{page.review}}
-              </div>
-           
-          </li>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-        </ul>
-</article>
 
-
-
-<!-- Futaro Yamada -->
-<article class="w3-container w3-margin w3-border w3-hover-border-black" id="yokomizo">
-  <h1>Futaro Yamada (山田風太郎-やまだふうたろう) 1922-2001</h1>
-    <p>Name: 山田風太郎-やまだふうたろう YAMADA Futarou</p>
-    <p>Detective: Kosuke Kindaichi (金田一 耕助, KINDAICHI Kōsuke)</p>
-    <p>Futaro Yamada is one of the major Japanese writers of genre fiction. He wrote mainly mystery and historical novels. He is also know for his ninja novels.</p> 
-      <ul>
-        {% for page in site.pages %}
-        {% if page.layout == 'book' %} 
-        {% if page.authorEn == 'Seishi Yokomizo' %}
-          <li>
-            <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
-              <b>{{page.titleKj}}</b>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}     
-            </button>     
-            <div id="translations" class="w3-container">
-              {{page.translation}}, {{page.translator}}, {{page.yeartr}}
-            </div>
-            <div id="{{page.titleKj}}" class="w3-container w3-hide">
-              {{page.summary}}, {{page.review}}
-            </div>
-           
-          </li>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-        </ul>
-</article>
 
 </div>
 
@@ -161,9 +106,9 @@ title: index
   <div class="w3-container w3-quarter">
     <h2>Authors</h2> 
       <div class="w3-bar-block w3-black">
-        <a href="#yokomizo" class="w3-bar-item w3-button">Edogawa Rampo</a>
-        <a href="#" class="w3-bar-item w3-button">Paris</a>
-        <a href="#" class="w3-bar-item w3-button">Tokyo</a>
+        {% for author in authors %}
+        <a href="#{{author}}" class="w3-bar-item w3-button">{{author}}</a>
+        {% endfor %}
       </div>
   </div>
 </div>

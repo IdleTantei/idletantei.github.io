@@ -3,7 +3,7 @@ titleKj: 獄門島
 titleHg: ごくもんとう
 titleRj: gokumontō
 titleTr: Gokumon Island
-authorJp: 横溝正史
+authorKj: 横溝正史
 authorHg: よこみぞ せいし
 authorEn: Seishi Yokomizo
 year: 1947

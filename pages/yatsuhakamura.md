@@ -3,7 +3,7 @@ titleKj: 八つ墓村
 titleHg: やつはかむら
 titleRj: yatsuha kamura
 titleTr: The Village of Eight Graves
-authorJp: 横溝正史
+authorKj: 横溝正史
 authorHg: よこみぞ せいし
 authorEn: Seishi Yokomizo
 year: 1971
