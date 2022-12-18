@@ -60,8 +60,8 @@ title: index
   <p>This is another paragraph.</p>
 </div>
 <p>
-  <button onclick="w3.hide('#translations')">Hide Translations</button>
-  <button onclick="w3.show('#translations')">Show Translations</button>
+  <button onclick="w3.hide('#romaji')">Hide romaji</button>
+  <button onclick="w3.show('#romaji')">Show romaji</button>
   </p>
   
 <div class="w3-row"> 
@@ -79,13 +79,13 @@ title: index
           {% if page.authorKj == author %}
             <li>
               <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
-                <b>{{page.titleKj}}</b>, {{page.authorKj}}, {{page.authorEn}}, {{page.year}}     
+                <b>{{page.titleKj}}</b>,{{page.titleHg}}, {{page.titleTr}}, {{page.year}}
+                <div id="romaji" class="w3-container">{{page.titleRj}}</div> 
               </button>     
-              <div id="translations" class="w3-container">
-                {{page.translation}}, {{page.translator}}, {{page.yeartr}}
-              </div>
               <div id="{{page.titleKj}}" class="w3-container w3-hide">
-                {{page.summary}}, {{page.review}}
+                {{translation}}, {{translator}}, {{yeartr}}<br><br>
+                {{prizeKj}}, {{prizeEn}}, {{yearPr}}<br><br>
+                {{page.summary}}</br></br>{{page.review}}
               </div>
             
             </li>
