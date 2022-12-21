@@ -45,27 +45,27 @@ kind: visible
   <article class="w3-container w3-margin w3-border w3-hover-border-black" id="{{author.nameKj}}">
     <a href="{{author.url}}"><h1>{{author.nameKj}}</h1></a>
     <p>{{author.bio}}</p>
- <!-- information rajoutee a la main   <p>Name: 江戸川乱歩 (えどがわらんぽ)</p>
-      <p>Detective: Kogoro Akechi (明智小五郎)</p>
-      <p>Edogawa Rampo has created private detective Kogoro Akechi and the Boys Detective Club, a series for children led by young detective Kobayashi.</p> -->  
+ 
         <ul>
-          {% for page in site.pages %}
-          {% if page.kind == 'book' %} 
-          {% if page.authorKj == author.nameKj %}
+          {% assign books = site.pages | where:"kind", "book" | where:"authorKj", author.nameKj | sort: "seriesnb" %}
+          {% for page in books %}
+          
+        
             <li>
               <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
                 <b>{{page.titleKj}}</b>,{{page.titleHg}}, {{page.titleTr}}, {{page.year}}
                 <div id="romaji" class="w3-container">{{page.titleRj}}</div> 
-              </button>     
+              </button>
               <div id="{{page.titleKj}}" class="w3-container w3-hide">
-                {% if page.translation and page.translation != '' %} {{page.translation}}, {{page.translator}}, {{page.yeartr}}{% endif %}<br>
-                {% if page.prizeKj and page.prizeKj != '' %}{{page.prizeKj}}, {{page.prizeEn}}, {{page.yearPr}}{% endif %}<br>
-                {{page.summary}}</br></br>{{page.review}}
+                {% if page.translation and page.translation != '' %}English Translation: {{page.translation}}, {{page.translator}}, {{page.yeartr}}{% endif %}
+                <br>
+                {% if page.prizeKj and page.prizeKj != '' %}Award: {{page.prizeKj}}, {{page.prizeEn}}, {{page.yearPr}}{% endif %}<br>
+                {{page.summary}}<br><br>{{page.review}}
               </div>
             
             </li>
-              {% endif %}
-              {% endif %}
+             
+              
               {% endfor %}
           </ul>
   </article>
