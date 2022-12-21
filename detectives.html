@@ -4,7 +4,7 @@ kind: visible
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Japanese detective novels</title>
+  <title>Japanese fictional detectives</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://www.w3schools.com/lib/w3.js"></script>
@@ -26,13 +26,13 @@ kind: visible
 <!-- Navigation (Stays on Top) -->
 <div class="w3-top w3-bar w3-black">
 <a href="#home" class="w3-bar-item w3-button">Home</a>
-<a href="detectives.html" class="w3-bar-item w3-button">Detectives</a>
+<a href="#about" class="w3-bar-item w3-button">About</a>
 <a href="#members" class="w3-bar-item w3-button">Members</a>
 <a href="#contact" class="w3-bar-item w3-button">Contact</a>
 </div>
 
 <!-- code pour generer les auteurs automatiquement -->
-{% assign authors = site.pages | where:"kind", "author" %}
+{% assign detectives = site.pages | where:"kind", "detective" %}
 
 <div class="w3-container w3-center w3-teal">
   <h1>This is a Heading</h1>
@@ -47,17 +47,17 @@ kind: visible
 <div class="w3-row"> 
   <div class="w3-container w3-threequarter">
 
-{% for author in authors %}
-  <article class="w3-container w3-margin w3-border w3-hover-border-black" id="{{author.nameKj}}">
-    <a href="{{author.url}}"><h1>{{author.nameKj}}</h1></a>
-    <p>{{author.bio}}</p>
+{% for detective in detectives %}
+  <article class="w3-container w3-margin w3-border w3-hover-border-black" id="{{detective.nameKj}}">
+    <a href="{{detective.url}}"><h1>{{detective.nameKj}}</h1></a>
+    <p>{{detective.bio}}</p>
  <!-- information rajoutee a la main   <p>Name: 江戸川乱歩 (えどがわらんぽ)</p>
       <p>Detective: Kogoro Akechi (明智小五郎)</p>
       <p>Edogawa Rampo has created private detective Kogoro Akechi and the Boys Detective Club, a series for children led by young detective Kobayashi.</p> -->  
         <ul>
           {% for page in site.pages %}
           {% if page.kind == 'book' %} 
-          {% if page.authorKj == author.nameKj %}
+          {% if page.detectiveKj == detective.nameKj %}
             <li>
               <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
                 <b>{{page.titleKj}}</b>,{{page.titleHg}}, {{page.titleTr}}, {{page.year}}
@@ -85,10 +85,10 @@ kind: visible
 
 <!-- side bar -->
   <div class="w3-container w3-quarter">
-    <h2>Authors</h2> 
+    <h2>Detectives</h2> 
       <div class="w3-bar-block w3-black">
-        {% for author in authors %}
-        <a href="#{{author.nameKj}}" class="w3-bar-item w3-button">{{author.nameKj}}</a>
+        {% for detective in detectives %}
+        <a href="#{{detective.nameKj}}" class="w3-bar-item w3-button">{{detective.nameKj}}</a>
         {% endfor %}
       </div>
   </div>
