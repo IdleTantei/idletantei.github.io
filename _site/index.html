@@ -1,216 +1,24 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Japanese detective novels</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
-</head>
-
-<script>
-  function Accordeon(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else { 
-      x.className = x.className.replace(" w3-show", "");
-    }
-  }
-  </script>
-
-<body>
-
-<!-- Navigation (Stays on Top) -->
+<html lang="en">
+    <head>
+        <meta charset="utf8">
+        <title>monsite</title>
+        <link rle="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <!-- Navigation (Stays on Top) -->
 <div class="w3-top w3-bar w3-black">
-<a href="#home" class="w3-bar-item w3-button">Home</a>
-<a href="detectives.html" class="w3-bar-item w3-button">Detectives</a>
-<a href="#members" class="w3-bar-item w3-button">Members</a>
-<a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="detectives.html" class="w3-bar-item w3-button">Detectives</a>
+    <a href="authors.html" class="w3-bar-item w3-button">Authors</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
 </div>
-
-<!-- code pour generer les auteurs automatiquement -->
-
-
-<div class="w3-container w3-center w3-teal">
-  <h1>This is a Heading</h1>
-  <p>This is a paragraph.</p>
-  <p>This is another paragraph.</p>
-</div>
-<p>
-  <button onclick="w3.hide('#romaji')">Hide romaji</button>
-  <button onclick="w3.show('#romaji')">Show romaji</button>
-  </p>
-  
-<div class="w3-row"> 
-  <div class="w3-container w3-threequarter">
-
-
-  <article class="w3-container w3-margin w3-border w3-hover-border-black" id="山田風太郎">
-    <a href="/pages/Authors/%E5%B1%B1%E7%94%B0%E9%A2%A8%E5%A4%AA%E9%83%8E.html"><h1>山田風太郎</h1></a>
-    <p>blablabla <b>en italique</b></p>
- <!-- information rajoutee a la main   <p>Name: 江戸川乱歩 (えどがわらんぽ)</p>
-      <p>Detective: Kogoro Akechi (明智小五郎)</p>
-      <p>Edogawa Rampo has created private detective Kogoro Akechi and the Boys Detective Club, a series for children led by young detective Kobayashi.</p> -->  
-        <ul>
-          
-          
-              
-          
-              
-          
-              
-           
-          
-            <li>
-              <button onclick="Accordeon('眼中の悪魔')" class="w3-button w3-block w3-left-align">
-                <b>眼中の悪魔</b>,がんちゅうのあくま, The Familiar Devil, 1948
-                <div id="romaji" class="w3-container">ganchuno akuma</div> 
-              </button>     
-              <div id="眼中の悪魔" class="w3-container w3-hide">
-                <br>
-                日本推理作家協会賞, Mystery Writers of Japan Award, <br>
-                </br></br>
-              </div>
-            
-            </li>
-              
-              
-              
-          
-              
-           
-          
-              
-              
-           
-          
-              
-              
-           
-          
-              
-              
-           
-          
-              
-              
-          
-              
-          </ul>
-  </article>
-
-  <article class="w3-container w3-margin w3-border w3-hover-border-black" id="横溝正史">
-    <a href="/pages/Authors/%E6%A8%AA%E6%BA%9D%E6%AD%A3%E5%8F%B2.html"><h1>横溝正史</h1></a>
-    <p>blablabla *en italique*</p>
- <!-- information rajoutee a la main   <p>Name: 江戸川乱歩 (えどがわらんぽ)</p>
-      <p>Detective: Kogoro Akechi (明智小五郎)</p>
-      <p>Edogawa Rampo has created private detective Kogoro Akechi and the Boys Detective Club, a series for children led by young detective Kobayashi.</p> -->  
-        <ul>
-          
-          
-              
-          
-              
-          
-              
-           
-          
-              
-              
-          
-              
-           
-          
-            <li>
-              <button onclick="Accordeon('八つ墓村')" class="w3-button w3-block w3-left-align">
-                <b>八つ墓村</b>,やつはかむら, The Village of Eight Graves, 1971
-                <div id="romaji" class="w3-container">yatsuha kamura</div> 
-              </button>     
-              <div id="八つ墓村" class="w3-container w3-hide">
-                 The Village of Eight Graves, Bryan Karetnyk, 2021<br>
-                <br>
-                Nestled deep in the mist-shrouded mountains, The Village of Eight Graves takes its name from a bloody legend. In the Sixteenth Century eight samurais, who had taken refuge there along with a secret treasure, were murdered by the inhabitants, bringing a terrible curse down upon their village. Centuries later a mysterious young man named Tatsuya arrives in town, bringing a spate of deadly poisonings in his wake. The inimitably scruffy and brilliant Kosuke Kindaichi investigates.</br></br>
-              </div>
-            
-            </li>
-              
-              
-              
-           
-          
-            <li>
-              <button onclick="Accordeon('夜歩く')" class="w3-button w3-block w3-left-align">
-                <b>夜歩く</b>,よるあるく, Walking by Night, 1973
-                <div id="romaji" class="w3-container">yoru aruku</div> 
-              </button>     
-              <div id="夜歩く" class="w3-container w3-hide">
-                <br>
-                <br>
-                </br></br>
-              </div>
-            
-            </li>
-              
-              
-              
-           
-          
-            <li>
-              <button onclick="Accordeon('本陣殺人事件')" class="w3-button w3-block w3-left-align">
-                <b>本陣殺人事件</b>,ほんじんさつじんじけん, The Honjin Murder Case, 1946
-                <div id="romaji" class="w3-container">honjin satsujin jiken</div> 
-              </button>     
-              <div id="本陣殺人事件" class="w3-container w3-hide">
-                 The Honjin Murders, Louise Heal Kawai, 2019<br>
-                <br>
-                The Ichiyanagi family has been living in a honjin, an inn for government officials, located in a post station since the Edo period. After a wedding ceremony, screams pierce through the night, accompanied by the sound of koto, in an unusual and extraordinary combination. The bribe and the groom who where resting in a separate building, are found covered in blood, brutally murdered. A golden folden screen, that has three bloody fingerprints on it, has fallen near the pillow, near a precious koto, the family treasure. The snow that had piled up all around the building makes it a complete locked-room. This book is the introduction of Kosuke Kindaichi who has just come back from the United States.</br></br>Even though the ingenuosity of the tricks behind this locked-room mystery is the main attraction of the novel, it left me rather skeptical. The setting, the characters and most importantly, young detective Kosuke Kindaichi were what truly made the novel shine to me. Kindaichi is very reminiscent from young Kogoro Akechi as he appears in the first short stories.
-              </div>
-            
-            </li>
-              
-              
-              
-           
-          
-            <li>
-              <button onclick="Accordeon('獄門島')" class="w3-button w3-block w3-left-align">
-                <b>獄門島</b>,ごくもんとう, Gokumon Island, 1947
-                <div id="romaji" class="w3-container">gokumontō</div> 
-              </button>     
-              <div id="獄門島" class="w3-container w3-hide">
-                 Gokumon Island, Louise Heal Kawai, 2022<br>
-                <br>
-                dddddddddd</br></br>
-              </div>
-            
-            </li>
-              
-              
-              
-          
-              
-          </ul>
-  </article>
-
-
-
-
-</div>
-
-
-
-<!-- side bar -->
-  <div class="w3-container w3-quarter">
-    <h2>Authors</h2> 
-      <div class="w3-bar-block w3-black">
-        
-        <a href="#山田風太郎" class="w3-bar-item w3-button">山田風太郎</a>
-        
-        <a href="#横溝正史" class="w3-bar-item w3-button">横溝正史</a>
-        
-      </div>
-  </div>
-</div>
-</div>
-</body>
+        <h1>About</h1>
+        <section>
+           <p>welcome</p>
+        </section>
+        <footer>
+            &copy; to me
+        </footer>
+    </body>
 </html>
