@@ -7,6 +7,8 @@ kind: visible
   <title>Japanese detective novels</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2018.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
   <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
@@ -21,18 +23,18 @@ kind: visible
   }
   </script>
 
-<body>
+
+<body class="w3-2018-coconut-milk">
 
 {% include navigation.html %}
 
 <!-- code pour generer les auteurs automatiquement -->
 {% assign authors = site.pages | where:"kind", "author" %}
+<!-- Header -->
+<header class="w3-container w3-black w3-center w3-padding-32"> 
+  <h1><b>Japanese authors of detective fiction</b></h1>
+</header>
 
-<div class="w3-container w3-center w3-teal">
-  <h1>This is a Heading</h1>
-  <p>This is a paragraph.</p>
-  <p>This is another paragraph.</p>
-</div>
 <p>
   <button onclick="w3.hide('#romaji')">Hide romaji</button>
   <button onclick="w3.show('#romaji')">Show romaji</button>
@@ -53,6 +55,7 @@ kind: visible
         
             <li>
               <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
+            
                 <b>{{page.titleKj}}</b>,{{page.titleHg}}, {{page.titleTr}}, {{page.year}}
                 <div id="romaji" class="w3-container">{{page.titleRj}}</div> 
               </button>
@@ -82,7 +85,7 @@ kind: visible
     <h2>Authors</h2> 
       <div class="w3-bar-block w3-black">
         {% for author in authors %}
-        <a href="#{{author.nameKj}}" class="w3-bar-item w3-button">{{author.nameKj}}</a>
+        <a href="#{{author.nameKj}}" class="w3-bar-item w3-button w3-hover-deep-orange">{{author.nameKj}}</a>
         {% endfor %}
       </div>
   </div>
