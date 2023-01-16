@@ -57,13 +57,14 @@ kind: visible
               <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
             
                 <b>{{page.titleKj}}</b>, ({{page.titleHg}}), "{{page.titleTr}}", {{page.year}}
-                <div id="read" class="w3-container">{% if page.read and page.read == 'oui' %}Review: {{page.rating}}, {{page.review}}{% endif %}</div> 
+                
               </button>
               <div id="{{page.titleKj}}" class="w3-container w3-hide">
                 {% if page.translation and page.translation != '' %}English Translation: <i>{{page.translation}}</i>, {{page.translator}}, {{page.yeartr}}{% endif %}
                 <br>
                 {% if page.prizeKj and page.prizeKj != '' %}Award: {{page.prizeKj}}, {{page.prizeEn}}, {{page.yearPr}}{% endif %}<br>
                 Summary: {{page.summary}}<br>
+                <div id="read">{% if page.read and page.read == 'oui' %}<br>Review: {{page.rating}}, {{page.review}}{% endif %}</div> 
               </div>
             
             </li>
