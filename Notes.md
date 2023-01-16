@@ -1,0 +1,1 @@
+pour ouvrir le visuel: bundle exec jekyll serve

@@ -36,8 +36,8 @@ kind: visible
 </header>
 
 <p>
-  <button onclick="w3.hide('#romaji')">Hide romaji</button>
-  <button onclick="w3.show('#romaji')">Show romaji</button>
+  <button onclick="w3.hide('#read')">Hide my notes</button>
+  <button onclick="w3.show('#read')">Show my notes</button>
   </p>
   
 <div class="w3-row"> 
@@ -45,7 +45,7 @@ kind: visible
 
 {% for author in authors %}
   <article class="w3-container w3-margin w3-border w3-hover-border-black" id="{{author.nameKj}}">
-    <a href="{{author.url}}"><h1>{{author.nameKj}}</h1></a>
+    <a href="{{author.url}}"><h1>{{author.nameEn}} ({{author.nameKj}})</h1></a>
     <p>{{author.bio}}</p>
  
         <ul>
@@ -56,14 +56,14 @@ kind: visible
             <li>
               <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
             
-                <b>{{page.titleKj}}</b>,{{page.titleHg}}, {{page.titleTr}}, {{page.year}}
-                <div id="romaji" class="w3-container">{{page.titleRj}}</div> 
+                <b>{{page.titleKj}}</b>, ({{page.titleHg}}), "{{page.titleTr}}", {{page.year}}
+                <div id="read" class="w3-container">{% if page.read and page.read == 'oui' %}Review: {{page.rating}}, {{page.review}}{% endif %}</div> 
               </button>
               <div id="{{page.titleKj}}" class="w3-container w3-hide">
-                {% if page.translation and page.translation != '' %}English Translation: {{page.translation}}, {{page.translator}}, {{page.yeartr}}{% endif %}
+                {% if page.translation and page.translation != '' %}English Translation: <i>{{page.translation}}</i>, {{page.translator}}, {{page.yeartr}}{% endif %}
                 <br>
                 {% if page.prizeKj and page.prizeKj != '' %}Award: {{page.prizeKj}}, {{page.prizeEn}}, {{page.yearPr}}{% endif %}<br>
-                {{page.summary}}<br><br>{{page.review}}
+                Summary: {{page.summary}}<br>
               </div>
             
             </li>
