@@ -49,8 +49,10 @@ kind: visible
     <p>{{author.bio}}</p>
  
         <ul>
-          {% assign books = site.pages | where:"kind", "book" | where:"authorKj", author.nameKj | sort: "year" %}
-          {% for page in books %}
+          {% assign groups = site.pages | where:"kind", "book" | where:"authorKj", author.nameKj | sort: "year" |group_by: "series" %}
+          {% for group in groups %}
+          <h3>{{group.name}} series</h3>
+          {% for page in group.items %}
           
         
             <li>
@@ -70,6 +72,7 @@ kind: visible
             </li>
              
               
+              {% endfor %}
               {% endfor %}
           </ul>
   </article>
