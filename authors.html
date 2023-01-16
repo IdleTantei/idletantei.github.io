@@ -29,7 +29,7 @@ kind: visible
 {% include navigation.html %}
 
 <!-- code pour generer les auteurs automatiquement -->
-{% assign authors = site.pages | where:"kind", "author" %}
+{% assign authors = site.pages | where:"kind", "author" | sort:"dates" %}
 <!-- Header -->
 <header class="w3-container w3-black w3-center w3-padding-32"> 
   <h1><b>Japanese authors of detective fiction</b></h1>
@@ -49,14 +49,14 @@ kind: visible
     <p>{{author.bio}}</p>
  
         <ul>
-          {% assign books = site.pages | where:"kind", "book" | where:"authorKj", author.nameKj | sort: "seriesnb" %}
+          {% assign books = site.pages | where:"kind", "book" | where:"authorKj", author.nameKj | sort: "year" %}
           {% for page in books %}
           
         
             <li>
               <button onclick="Accordeon('{{page.titleKj}}')" class="w3-button w3-block w3-left-align">
             
-                <b>{{page.titleKj}}</b>, ({{page.titleHg}}), "{{page.titleTr}}", {{page.year}}
+                <b>{{page.titleKj}}</b>, ({{page.titleHg}}), "{{page.titleTr}}", {{page.year}} {% if page.series and page.series != '' %}<b>, {{page.series}}</b> series {{page.seriesnb}}{% endif %}
                 
               </button>
               <div id="{{page.titleKj}}" class="w3-container w3-hide">
