@@ -51,7 +51,9 @@ kind: visible
         <ul>
           {% assign groups = site.pages | where:"kind", "book" | where:"authorKj", author.nameKj | sort: "year" |group_by: "series" %}
           {% for group in groups %}
-          <h3>{{group.name}} series</h3>
+          {% if group.name == '' %}<h3>Non series</h3>
+          {% else %}<h3>{{group.name}} series</h3>
+          {% endif %}
           {% for page in group.items %}
           
         
