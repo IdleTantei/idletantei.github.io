@@ -7,11 +7,11 @@ kind: visible
 {% assign authors = site.pages | where:"kind", "author" | sort:"dates" %}
 
 <!-- side bar -->
-<div class="w3-sidebar w3-bar-block w3-2018-coconut-milk" style="width:25%">
+<div class="w3-sidebar w3-bar-block w3-2018-almost-mauve" style="width:25%">
       <h2>Authors</h2> 
-        <div class="w3-bar-block w3-black w3-margin">
+        <div class="w3-bar-block w3-margin">
           {% for author in authors %}
-          <a href="#{{author.nameKj}}" class="w3-bar-item w3-button w3-hover-deep-orange w3-border-bottom">{{author.nameEn}}, {{author.nameKj}}</a>
+          <a href="#{{author.nameKj}}" class="w3-bar-item w3-button w3-hover-khaki w3-border-bottom">{{author.nameEn}}, {{author.nameKj}}</a>
           {% endfor %}
         </div>
 </div>
@@ -22,7 +22,9 @@ kind: visible
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2018.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2020.css">
   <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
+  
   <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
@@ -38,7 +40,7 @@ kind: visible
   </script>
 
 
-<body class="w3-2018-coconut-milk">
+<body>
 
 {% include navigation.html %}
 
